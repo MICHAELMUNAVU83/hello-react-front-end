@@ -18,7 +18,7 @@ function Greeting() {
 
   return (
     <div>
-      Greetings
+      My Greetings
       <div>
         <button onClick={handleClick}>Display Greeting</button>
       </div>
