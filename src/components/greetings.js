@@ -1,12 +1,13 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+/* eslint-disable no-param-reassign */
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchGreeting = createAsyncThunk(
-  "greeting/fetchGreeting",
+  'greeting/fetchGreeting',
   async () => {
-    const response = await fetch("http://localhost:3000/api/v1/greetings");
+    const response = await fetch('http://localhost:3000/api/v1/greetings');
     const data = await response.json();
     return data;
-  }
+  },
 );
 
 const initialState = {
@@ -14,7 +15,7 @@ const initialState = {
 };
 
 export const greetingSlice = createSlice({
-  name: "greeting",
+  name: 'greeting',
   initialState,
   reducers: {},
   extraReducers: {
@@ -25,3 +26,4 @@ export const greetingSlice = createSlice({
 });
 
 export default greetingSlice.reducer;
+/* eslint-enable no-param-reassign */

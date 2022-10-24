@@ -1,8 +1,9 @@
-import React from "react";
-import Greeting from "./components/Greeting";
-import { Provider } from "react-redux";
-import store from "./configureStore";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Greeting from './components/Greeting';
+import store from './configureStore';
+
 function App() {
   return (
     <Provider store={store}>
